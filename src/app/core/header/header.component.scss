@@ -1,0 +1,163 @@
+
+// Variables
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$navbar-bg-color: #f8f9fa;
+$search-bar-bg-color: #ffffff;
+$search-bar-border-color: #ced4da;
+$search-bar-placeholder-color: #6c757d;
+$search-bar-input-color: #495057;
+$search-bar-button-color: #007bff;
+$user-profile-link-color: #007bff;
+$header-bg-color: #f8f9fa;
+$logo-height: 40px;
+$blog-name-font-size: 1.5rem;
+$blog-name-font-weight: 700;
+$blog-name-color: #333;
+// Mixins
+@mixin transition($properties, $duration) {
+  transition: $properties $duration ease-in-out;
+}
+
+// Header Styles
+header {
+  background-color: $navbar-bg-color;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  min-height: 60px;
+  padding: 0;
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-right: 10px;
+    .logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+  .navbar-toggler {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    span.navbar-toggler-icon {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-repeat: no-repeat;
+      background-position: center;
+
+    }
+  }
+  .collapse.navbar-collapse {
+    justify-content: flex-end;
+    ul.navbar-nav {
+      li.nav-item {
+        margin-right: 10px;
+        a.nav-link {
+          color: $secondary-color;
+          text-decoration: none;
+          &:hover {
+            color: $primary-color;
+          }
+          &.active {
+            font-weight: bold;
+            color: $primary-color;
+          }
+        }
+      }
+      li.nav-item.dropdown {
+        .dropdown-menu {
+          background-color: $navbar-bg-color;
+          a.dropdown-item {
+            color: $secondary-color;
+            text-decoration: none;
+            &:hover {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+      // Search Bar Styles
+.form-control {
+  border-color: $search-bar-border-color;
+  &:focus {
+    border-color: $search-bar-border-color;
+    box-shadow: none;
+  }
+  &::placeholder {
+    color: $search-bar-placeholder-color;
+  }
+}
+
+.btn-outline-primary {
+  color: $search-bar-button-color;
+  border-color: $search-bar-button-color;
+  &:hover {
+    color: #fff;
+    background-color: $search-bar-button-color;
+    border-color: $search-bar-button-color;
+  }
+}
+// Variables
+$user-profile-link-color: #007bff;
+$user-profile-link-hover-color: #0056b3;
+
+// User Profile Styles
+.user-account-profile {
+  display: flex;
+  align-items: center;
+  margin-left: 5%;
+
+  a {
+    color: $user-profile-link-color;
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: $user-profile-link-hover-color;
+      text-decoration: underline;
+    }
+  }
+}
+
+
+    }
+  }
+}
+.logo {
+  width: 200px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 000px;
+  box-shadow: 0 2px 6px rgba(124, 181, 134, 0.1);
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: rotate(1turn);
+  }
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  height: $logo-height;
+  width: auto;
+  margin-right: 5px;
+}
+
+.blog-name {
+  font-size: $blog-name-font-size;
+  font-weight: $blog-name-font-weight;
+  color: $blog-name-color;
+}

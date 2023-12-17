@@ -1,0 +1,130 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Color Scheme */
+$primary-color: #4c6ef5;
+$secondary-color: #333333;
+$background-color: #f7f7f7;
+
+/* Typography */
+$base-font-size: 16px;
+$heading-font-size: 24px;
+$post-title-font-size: 18px;
+
+/* Featured Content Section Styles */
+.featured-content {
+  background-color: $background-color;
+  padding: 2rem;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: $heading-font-size;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: $secondary-color;
+  }
+
+  .featured-posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+
+    .featured-post {
+      background-color: #fff;
+      padding: 1.5rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease-in-out;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .post-image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+      }
+
+      .post-title {
+        font-size: $post-title-font-size;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: $secondary-color;
+      }
+
+      .post-description {
+        font-size: $base-font-size;
+        color: $secondary-color;
+      }
+
+      .post-link {
+        display: inline-block;
+        margin-top: 1rem;
+        color: $primary-color;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Featured Content Styles */
+.featured-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Blog Post List Styles */
+.post-list {
+  margin-bottom: 20px;
+}
+
+/* Pagination Styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Categories/Tags Styles */
+.categories,
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Individual Category/Tag Styles */
+.category,
+.tag {
+  background-color: #f2f2f2;
+  padding: 8px 12px;
+  border-radius: 4px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #e0e0e0;
+  }
+}

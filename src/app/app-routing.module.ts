@@ -1,7 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ContactComponent } from './contact/contact.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: 'contact', component: ContactComponent },
+  { path: 'about-us', component: AboutUsComponent },
+  { path: 'articles', loadChildren: () => import('./articles/articles.module').then(m => m.ArticlesModule) },
+  { path: '', pathMatch: 'full', redirectTo: 'articles' },
+  { path: 'posts', loadChildren: () => import('./posts/posts.module').then(m => m.PostsModule) },
+  { path: 'articles', loadChildren: () => import('./articles/articles.module').then(m => m.ArticlesModule) },
+  { path: 'posts', loadChildren: () => import('./posts/posts.module').then(m => m.PostsModule) },
+  { path: '**', redirectTo: 'articles' }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -1,0 +1,16 @@
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo:hover {
+  transform: rotate(1turn);
+}
