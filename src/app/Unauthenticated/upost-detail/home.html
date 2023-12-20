@@ -1,0 +1,37 @@
+<!-- Angular component HTML markup -->
+<div class="col-md-3 col-sm-12 post-exist" *ngIf="shouldDisplayPostActions()">
+  <!-- Conditionally display post actions when the user is authenticated and not on the home or profile page -->
+  <div class="list-group">
+    <!-- Link to add a new post -->
+    <a class="list-group-item" [routerLink]="createPostLink">Add new Post</a>
+
+    <!-- Link to edit a post -->
+    <a class="list-group-item" [routerLink]="editPostLink()">Edit Post</a>
+
+    <!-- Link to delete a post (triggers a modal) -->
+    <a class="list-group-item" data-toggle="modal" data-target="#myModal">Delete Post</a>
+
+    <!-- Link to view user's posts, with active class when isPrivate is true -->
+    <a class="list-group-item" [ngClass]="{ active: isPrivate }" [routerLink]="myPostsLink">My Posts</a>
+  </div>
+
+  <!-- Modal for confirming post deletion -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Please confirm Delete Action</h4>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to Delete Post.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="onDelete()">Delete</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
