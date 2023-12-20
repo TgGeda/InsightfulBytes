@@ -1,6 +1,6 @@
 # BlogBook
 
- [Live Demo](https://mehulk05.github.io/Blog-Book).
+ [Live Demo](https://TgGeda.github.io/InsightfulBytes).
 
 ## What Are Various Features
 - CRUD Operations
@@ -30,4 +30,4 @@
 - CRUD operations
 - Guards etc.
 
-# Live Demo :https://mehulk05.github.io/Blog-Book
+# Live Demo :TgGeda.github.io/InsightfulBytes
