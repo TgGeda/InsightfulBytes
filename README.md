@@ -1,4 +1,4 @@
-# BlogBook
+# InsightfulBytes
 
  [Live Demo](https://TgGeda.github.io/InsightfulBytes).
 
