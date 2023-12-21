@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "BlogBook": {
+        "InsightfulBytes": {
             "projectType": "application",
             "schematics": {},
             "root": "",
@@ -13,7 +13,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/BlogBook",
+                        "outputPath": "dist/InsightfulBytes",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": "src/polyfills.ts",
@@ -63,18 +63,18 @@
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "options": {
-                        "browserTarget": "BlogBook:build"
+                        "browserTarget": "InsightfulBytes:build"
                     },
                     "configurations": {
                         "production": {
-                            "browserTarget": "BlogBook:build:production"
+                            "browserTarget": "InsightfulBytes:build:production"
                         }
                     }
                 },
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "BlogBook:build"
+                        "browserTarget": "InsightfulBytes:build"
                     }
                 },
                 "test": {
@@ -111,11 +111,11 @@
                     "builder": "@angular-devkit/build-angular:protractor",
                     "options": {
                         "protractorConfig": "e2e/protractor.conf.js",
-                        "devServerTarget": "BlogBook:serve"
+                        "devServerTarget": "InsightfulBytes:serve"
                     },
                     "configurations": {
                         "production": {
-                            "devServerTarget": "BlogBook:serve:production"
+                            "devServerTarget": "InsightfulBytes:serve:production"
                         }
                     }
                 }
